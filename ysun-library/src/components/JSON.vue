@@ -178,8 +178,7 @@ const austen = computed(() =>
 <style scoped>
 .json-lab {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  width: 100%;
-  max-width: 1000px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 20px;
   background-color: #f4f4f4;
