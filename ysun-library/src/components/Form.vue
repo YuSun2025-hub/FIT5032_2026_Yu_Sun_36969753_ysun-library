@@ -67,7 +67,7 @@
   <DataTable :value="submittedCards" responsiveLayout="scroll" class="mt-5" v-if="submittedCards.length">
     <Column field="username" header="Username" />
     <Column field="password" header="Password" />
-    <Column field="isAustralian" header="Australian Resident" :body="rowData => rowData.isAustralian === 'yes' ? 'Yes' : 'No'" />
+    <Column field="isAustralian" header="Australian Resident" />
     <Column field="gender" header="Gender" />
     <Column field="reason" header="Reason" />
 </DataTable>
