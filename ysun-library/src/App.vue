@@ -2,12 +2,13 @@
 import JSON from './components/JSON.vue'
 import Form from './components/Form.vue'  
 import BHeader from './components/BHeader.vue'
+import HeaderforCR from './components/HeaderforCR.vue'
 </script>
 
 <template>
   <div class="main-container">
     <header>
-      <BHeader />
+      <HeaderforCR />
     </header>
 
     <main class="main-box">
