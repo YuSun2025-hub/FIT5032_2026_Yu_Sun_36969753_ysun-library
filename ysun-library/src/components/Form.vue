@@ -138,7 +138,8 @@ const submitForm = () => {
   validateResident(true);
   validateGender(true);
   validateReason(true);
-  if (!errors.value.username && !errors.value.password && !errors.value.resident &&!errors.value.gender && !errors.value.reason) {
+  validateConfirmPassword(true);
+  if (!errors.value.username && !errors.value.password && !errors.value.confirmPassword && !errors.value.resident &&!errors.value.gender && !errors.value.reason) {
     submittedCards.value.push({
         ...formData.value
     });
@@ -150,9 +151,11 @@ const clearForm = () => {
     formData.value = {
         username: '',
         password: '',
+        confirmPassword: '',
         isAustralian: '',
         reason: '', 
-        gender: ''
+        gender: '',
+        suburb: 'Clayton'
     };
     Object.keys(errors.value).forEach(k => errors.value[k] = null);    
 }; 
