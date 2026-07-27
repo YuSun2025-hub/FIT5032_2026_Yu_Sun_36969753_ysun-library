@@ -1,35 +1,7 @@
-# NoMash-Library
+I would like to clarify the reason for the commit dates shown in this repository.
 
-This template should help get you started developing with Vue 3 in Vite.
+Although this lab work was completed on July 21, 2026, I did not initially upload it to GitHub because the submission guidelines did not explicitly require it. However, after noticing that many of my classmates had submitted their work via GitHub, I decided to upload my completed lab files as well to ensure consistency and to provide a clear record of my work.
 
-## Recommended IDE Setup
+Therefore, the commit history reflects July 27 rather than the original completion date. I would like to emphasize that all the work contained in this submission was completed by July 21, and the upload today is purely for documentation and submission purposes.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+I apologise for any confusion this may cause and appreciate your understanding.
