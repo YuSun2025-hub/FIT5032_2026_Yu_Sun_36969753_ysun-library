@@ -31,7 +31,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 const apikey = "24c5811fab1432d15f596e898141d4d8";
 
@@ -95,15 +94,18 @@ export default {
 
     async fetchWeatherData(url) {
       try {
-        const response = await axios.get(url);
-        this.weatherData = response.data;
-        this.errorMessage = "";
+        const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`)
+        }
+        this.weatherData = await response.json()
+        this.errorMessage = ""
       } catch (error) {
-        console.error("Error fetching weather data:", error);
-        this.weatherData = null;
-        this.errorMessage = "Unable to find weather information for this location.";
+        console.error("Error fetching weather data:", error)
+        this.weatherData = null
+        this.errorMessage = "Unable to find weather information for this location."
       }
-    },
+    }
   },
 };
 </script>
