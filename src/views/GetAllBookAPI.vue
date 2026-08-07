@@ -9,43 +9,31 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import authors from '@/assets/json/authors.json'
 
-const loading = ref(false)
-const error = ref(null)
 const apiResponse = ref(null)
+const error = ref(null)
 
 const getApiData = async () => {
-  loading.value = true
-  error.value = null
-
   try {
-    const response = await fetch('src/assets/json/authors.json')
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)
-    }
-
-    const authors = await response.json()
-
     const books = authors.flatMap(author =>
       author.famousWorks.map(work => ({
         author: author.name,
         title: work.title,
-        year: work.year
+        year: work.year,
       }))
     )
 
     apiResponse.value = {
       success: true,
       data: {
-        books
+        books,
       },
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     }
   } catch (err) {
-    error.value = `Error loading book data: ${err.message}`
-    console.error('Error loading book data:', err)
-  } finally {
-    loading.value = false
+    error.value = `Error processing book data: ${err.message}`
+    console.error('Error processing book data:', err)
   }
 }
 
