@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/FIT5032_2026_Yu_Sun_36969753_ysun-library/',
   plugins: [
     vue(),
     vueDevTools(),
