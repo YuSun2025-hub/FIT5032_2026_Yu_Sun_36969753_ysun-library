@@ -7,6 +7,8 @@ import AddBookView from '@/views/AddBookView.vue'
 import WeatherView from '@/views/WeatherView.vue'
 import CountBookAPIView from '@/views/CountBookAPI.vue' 
 import GetAllBookAPIView from '@/views/GetAllBookAPI.vue'
+import GetBookCountView from '@/views/GetBookCountView.vue'
+import DrawCardView from '@/views/DrawCardView.vue'
 
 const routes = [
   {
@@ -48,6 +50,16 @@ const routes = [
     path:'/GetAllBookAPI',
     name:'GetAllBookAPI',
     component:GetAllBookAPIView
+  },
+  {
+    path:'/GetBookCount',
+    name:'GetBookCount',
+    component:GetBookCountView
+  },
+  {
+    path:'/DrawCard',
+    name:'DrawCard',
+    component:DrawCardView
   }
 ]
 
