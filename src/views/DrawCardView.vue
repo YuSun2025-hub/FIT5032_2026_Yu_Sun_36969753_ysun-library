@@ -82,7 +82,6 @@ export default {
       }
     },
     handleImageError(e) {
-      // 当外部图片加载失败时，直接在本地生成一张带有图书样式的 SVG 封面，零网络开销
       const title = encodeURIComponent(this.card.book.name || 'BOOK');
       const svgDataUri = `data:image/svg+xml;utf8,
         <svg xmlns="http://www.w3.org/2000/svg" width="140" height="200" viewBox="0 0 140 200">
